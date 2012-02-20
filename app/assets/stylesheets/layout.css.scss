@@ -22,19 +22,30 @@ header {
   }
 }
 
-section {
-  margin-top: 1em;
+.cls_sect {
+
+  background: $panel-color;
   font-size: 120%;
-  padding: 20px;
-  background: white;
   white-space:nowrap;
-  overflow: hidden;
-
-
+    overflow: hidden;
+  
   h1 {
     font-size: 200%;
   }
+
+
 }
+
+
+section {
+  margin-top: 1.2em;
+  //padding: 20px;  
+  padding: 3.75%;
+  background: $panel-color;
+
+}
+
+
 
 /* Links */
 

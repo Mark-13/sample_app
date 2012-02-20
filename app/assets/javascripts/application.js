@@ -28,7 +28,8 @@ $(document).ready(function() {
         //shape: 'tearDrop'
         shape: 'figure8'
         //shape: 'square'
-      
+        
+        ,tilt: 1
       
       
       }

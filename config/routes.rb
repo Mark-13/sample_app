@@ -7,9 +7,13 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#_about'
   match '/contact', to: 'static_pages#_contact'
 
+  match '/home', to: 'static_pages#_home'
+
   #root :to => 'static_pages#_home'
 
   root :to => 'static_pages#home_js'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

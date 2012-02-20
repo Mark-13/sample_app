@@ -1,29 +1,9 @@
 <% content_for :main do %>
-
-<script type="text/javascript">
-  
-  /*
-  $(function(){
-    <% @views_js.each do |p| %>     
-      $(<%= raw "\"##{p.gsub("/","-")}\"" %>).dialog({				
-
-        width: 540,			
-	draggable: false
-
-
-
-       });			
-    <% end %>
-  });
-  */
-</script>
-
-
 <ul id='roundabout' >
    <% @views_js.each do |p| %>   
      <li>
        <section class="round" id=<%= raw "\"#{p.gsub("/","-")}\""%>>
-         <%= render "#{p}" %>
+         <div class="cls_sect"><%= render "#{p}" %></a>
        </section>
      </li>
    <% end %>
