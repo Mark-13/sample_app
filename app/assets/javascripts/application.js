@@ -13,3 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function() {
+    
+    //$("section").corner("bite 10px").parent().css('padding', '8px').corner("bite 10px")
+    
+    $('ul#roundabout').roundabout(
+    
+      {
+        //btnNext: ".next",
+        //duration: 2000,
+        //reflect: true
+        //shape: 'tearDrop'
+        shape: 'figure8'
+        //shape: 'square'
+      
+      
+      
+      }
+       
+    );
+
+});

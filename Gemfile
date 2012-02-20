@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'bcrypt-ruby', '3.0.1'
+
+
+group :development  do
+  gem 'annotate', '~> 2.4.1.beta'
+end
 
 group :development, :test do
   gem 'sqlite3'

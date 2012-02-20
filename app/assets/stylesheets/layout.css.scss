@@ -1,7 +1,9 @@
 $full-width: 710px;
-$background-color: #cff;
 $link-color: #09c;
 $visited-link-color: #069;
+$background-color: #FF9900;
+$panel-color: yellow;
+
 
 .container {
   width: $full-width;
@@ -25,6 +27,9 @@ section {
   font-size: 120%;
   padding: 20px;
   background: white;
+  white-space:nowrap;
+  overflow: hidden;
+
 
   h1 {
     font-size: 200%;
@@ -87,7 +92,7 @@ a.signup_button {
   margin-right: auto;
   display: block;
   text-align: center;
-  width: 190px;
+  width: 33.333%;
   color: white;
   background: #006400;
   font-size: 150%;
@@ -101,6 +106,7 @@ a.signup_button {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+  background: $panel-color;
 }
 
 footer {
