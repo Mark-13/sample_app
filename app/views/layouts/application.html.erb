@@ -8,15 +8,14 @@
     
     <%= javascript_include_tag "application" %>
     
-    <%= javascript_include_tag "corner" %>
+    <%#= javascript_include_tag "corner" %>
     
     <%= stylesheet_link_tag 'roundabout', media: 'all' %>
     <%= javascript_include_tag "jquery.roundabout" %>
     <%= javascript_include_tag "jquery.roundabout-shapes.min" %>
 
-
-    <%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.8.17.custom', media: 'all' %>
-    <%= javascript_include_tag "jquery-ui-1.8.17.custom.min" %>
+    <%#= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.8.17.custom', media: 'all' %>
+    <%#= javascript_include_tag "jquery-ui-1.8.17.custom.min" %>
     
     <%= csrf_meta_tags %>
   </head>
@@ -25,6 +24,7 @@
       <%= render 'layouts/header' %>
       <%= yield :main %>
       <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>

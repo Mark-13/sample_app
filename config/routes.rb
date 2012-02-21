@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   
-  #get "users/new
+  resources :users
+  
   match '/signup',  to: 'users#_new'
 
   match '/help',    to: 'static_pages#_help'
@@ -9,7 +10,7 @@ SampleApp::Application.routes.draw do
 
   match '/home', to: 'static_pages#_home'
 
-  #root :to => 'static_pages#_home'
+  root :to => 'static_pages#_home'
 
   root :to => 'static_pages#home_js'
 
