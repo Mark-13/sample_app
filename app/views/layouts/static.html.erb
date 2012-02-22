@@ -1,6 +1,9 @@
  <% content_for :main do %>
  <section class="round">
- <%= yield %>
+   <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+   <% end %>
+   <%= yield %>
  </section>
  <% end %>
  <%= render :file  => "layouts/application.html.erb" %>
