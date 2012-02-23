@@ -21,6 +21,8 @@ class StaticPagesController < ApplicationController
 
   def home_js
 
+    @user = User.new
+    
     @views_js = \
       Dir.glob("app/views/users/_*") +\
       Dir.glob("app/views/static_pages/_*")

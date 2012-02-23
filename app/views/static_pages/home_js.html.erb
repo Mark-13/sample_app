@@ -3,7 +3,7 @@
    <% @views_js.each do |p| %>   
      <li>
        <section class="round" id=<%= raw "\"#{p.gsub("/","-")}\""%>>
-         <div class="cls_sect"><%= render "#{p}" %></a>
+         <div class="cls_sect"><%= render "#{p}" %></div>
        </section>
      </li>
    <% end %>
