@@ -9,6 +9,7 @@
 #  updated_at      :datetime        not null
 #  password_digest :string(255)
 #  remember_token  :string(255)
+#  admin           :boolean
 #
 
 class User < ActiveRecord::Base
@@ -24,7 +25,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6}
 
-   private
+  private
 
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64

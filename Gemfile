@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'bcrypt-ruby' 
+gem 'faker'
+gem 'thin'
+gem 'jquery-rails'
+gem 'will_paginate'
 
 
 group :development  do
@@ -21,7 +25,6 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
 
 group :test do
   gem 'capybara'
@@ -38,5 +41,4 @@ group :production do
  
 end
 
-gem 'thin'
 
