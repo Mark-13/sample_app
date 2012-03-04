@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   layout "static"
     
   def home
+   @micropost = current_user.microposts.build if signed_in?
    render "static_pages/_home.html.erb"
   end
 
