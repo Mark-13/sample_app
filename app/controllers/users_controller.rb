@@ -17,14 +17,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    render "users/_show.html.erb"
+    render "users/_show"
 
   end
 
   def new
     @user = User.new
         
-    render "users/_new.html.erb"
+    render "users/_new"
   end
 
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
        flash[:success] = "Welcome to the Sample App!"
        redirect_to @user
     else
-      render "users/_new.html.erb"
+      render "users/_new"
     end
   end
 

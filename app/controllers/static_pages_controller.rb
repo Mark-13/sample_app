@@ -3,20 +3,23 @@ class StaticPagesController < ApplicationController
   layout "static"
     
   def home
-   @micropost = current_user.microposts.build if signed_in?
-   render "static_pages/_home.html.erb"
+    if signed_in?
+      @micropost  = current_user.microposts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
+   render "static_pages/_home"
   end
 
   def help
-   render "static_pages/_help.html.erb"
+   render "static_pages/_help"
   end
 
   def about
-   render "static_pages/_about.html.erb"
+   render "static_pages/_about"
   end
 
   def contact
-   render "static_pages/_contact.html.erb"
+   render "static_pages/_contact"
   end
 
 
@@ -36,7 +39,7 @@ class StaticPagesController < ApplicationController
     end
         
     render  \
-      "static_pages/home_js.html.erb", \
+      "static_pages/home_js", \
       :layout => "application"
   end
   
